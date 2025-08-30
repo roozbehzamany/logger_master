@@ -12,7 +12,7 @@
 
 <img width="1067" height="121" src="https://github.com/user-attachments/assets/edff24fa-ef1a-4793-b141-e399d6466606" />
 
-<img width="1000" height="400" src="https://github. com/user-attachments/assets/d58e225b-250c-404c-967c-da63559b03a2" />
+<img width="1000" height="400" src="https://github.com/user-attachments/assets/d58e225b-250c-404c-967c-da63559b03a2" />
 
 1: Type your object like [String] ...
 
@@ -28,7 +28,7 @@ Add to your pubspec.yaml:
 
 ```dart
 dependencies:
-  logger_master: ^1.0.0+2
+  logger_master: ^1.0.0+3
 ```
 
 Then run:
