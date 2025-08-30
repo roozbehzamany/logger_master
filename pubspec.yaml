@@ -1,7 +1,7 @@
 name: logger_master
-description: "A new Flutter package project."
+description: "Best logger for flutter"
 version: 1.0.1
-homepage:
+homepage: 'https://github.com/roozbehzamany/logger_master'
 
 environment:
   sdk: '>=3.4.4 <4.0.0'
