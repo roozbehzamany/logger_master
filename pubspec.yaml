@@ -1,6 +1,6 @@
 name: logger_master
 description: "Best logger for flutter"
-version: 1.0.1
+version: 1.0.1+1
 homepage: 'https://github.com/roozbehzamany/logger_master'
 
 environment:
