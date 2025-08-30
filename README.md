@@ -1,39 +1,91 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+🚀 Features
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+✅ Simple API – just call object.info(), object.error(), etc.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+✅ Clickable logs – one click takes you to the exact file & line in Android Studio / IntelliJ.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+✅ Colored logs (info, warning, error, success, etc.) for better readability.
 
-## Features
+✅ Works with any Dart object.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+✅ Zero external dependencies.
 
-## Getting started
+📥 Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add to your pubspec.yaml:
 
-## Usage
+dependencies:
+  logger_master: ^1.0.0+1
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
 
-```dart
-const like = 'sample';
-```
+Then run:
 
-## Additional information
+flutter pub get
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+🛠️ Usage
+Import
+import 'package:logx/logx.dart';
+
+Example
+void main() {
+  final user = {'id': 1, 'name': 'Rooze'};
+
+  // Log info
+  user.info();
+
+  // Log with a custom tag
+  user.debug('USER_DATA');
+
+  // Log an error
+  Exception('Something went wrong').error();
+
+  // Log a success message
+  'Operation completed successfully!'.success();
+}
+
+🎨 Colored Output
+Method	Example Usage	Output Color
+info()	"Hello".info()	🟦 Blue
+debug()	"Debug".debug()	🟩 Green
+warning()	"Careful".warning()	🟨 Yellow
+error()	"Oops".error()	🟥 Red
+success()	"Done".success()	🟩 Bright Green
+🖱️ Clickable Logs
+
+When you run your app in Android Studio or IntelliJ, logs printed by LogX look like this:
+
+I/LogX: [INFO] user: {id: 1, name: Rooze}   (main.dart:12)
+
+
+👉 Clicking (main.dart:12) takes you directly to that file and line in your code.
+
+This makes debugging faster and smoother – no more searching for where a log was printed!
+
+⚙️ Customization
+
+You can enable/disable colors:
+
+object.info(colored: false);
+
+
+Or add tags:
+
+object.debug('NETWORK');
+
+📌 Roadmap
+
+ JSON pretty-printing
+
+ File logging support
+
+ Flutter-only extension (snackbar + toast logs)
+
+❤️ Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to check issues page
+.
+
+📄 License
+
+This project is licensed under the MIT License.
