@@ -4,60 +4,77 @@
 
 ✅ Clickable logs – one click takes you to the exact file & line in Android Studio / IntelliJ.
 
-✅ Colored logs (info, warning, error, success, etc.) for better readability.
+✅ Colored logs (info, warning, error, debug.) for better readability.
 
 ✅ Works with any Dart object.
 
 ✅ Zero external dependencies.
 
+<img width="1067" height="121" alt="Screenshot 2025-08-30 at 10 17 03 PM" src="https://github.com/user-attachments/assets/edff24fa-ef1a-4793-b141-e399d6466606" />
+
+<img width="2764" height="620" alt="Frame 2" src="https://github.com/user-attachments/assets/d58e225b-250c-404c-967c-da63559b03a2" />
+
+1: Type your object like [String] ...
+
+2: Your object [Hello World]
+
+3: Exact file line logger
+
+4: Number of line logger
+
 📥 Installation
 
 Add to your pubspec.yaml:
 
+```dart
 dependencies:
   logger_master: ^1.0.0+1
-
+```
 
 Then run:
 
 flutter pub get
 
 🛠️ Usage
-Import
-import 'package:logx/logx.dart';
 
-Example
+```dart
+
+import 'package:logger_master/logger_master.dart';
+
 void main() {
-  final user = {'id': 1, 'name': 'Rooze'};
+  ExampleModel exampleModel = ExampleModel(id: 1, name: "Example");
 
   // Log info
-  user.info();
+  "Hello World".logInfo();
 
   // Log with a custom tag
-  user.debug('USER_DATA');
+  exampleModel.logWarning();
+  exampleModel.name.logError();
 
   // Log an error
-  Exception('Something went wrong').error();
-
-  // Log a success message
-  'Operation completed successfully!'.success();
+  123.logDebug();
 }
+```
 
 🎨 Colored Output
 Method	Example Usage	Output Color
-info()	"Hello".info()	🟦 Blue
-debug()	"Debug".debug()	🟩 Green
-warning()	"Careful".warning()	🟨 Yellow
-error()	"Oops".error()	🟥 Red
-success()	"Done".success()	🟩 Bright Green
+
+logInfo()	"Hello".logInfo()	🟦 Blue
+
+logDebug()	"Debug".logDebug()	🟩 Green
+
+logWarning()	"Careful".logWarning()	🟨 Yellow
+
+logError()	"Oops".logError()	🟥 Red
+
 🖱️ Clickable Logs
 
-When you run your app in Android Studio or IntelliJ, logs printed by LogX look like this:
+When you run your app in Android Studio or IntelliJ, logs printed by logger look like this:
 
-I/LogX: [INFO] user: {id: 1, name: Rooze}   (main.dart:12)
+[String] Hello World [file://package:example/main.dart:10]
 
 
-👉 Clicking (main.dart:12) takes you directly to that file and line in your code.
+👉 Clicking (main.dart:10) takes you directly to that file and line in your code.
 
 This makes debugging faster and smoother – no more searching for where a log was printed!
 
