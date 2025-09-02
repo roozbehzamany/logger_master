@@ -1,6 +1,6 @@
 name: logger_master
-description: "Best logger for flutter"
-version: 1.0.1+3
+description: "A lightweight Flutter logging utility with colorful output, tags, and clickable file paths for easier debugging in IDEs."
+version: 1.0.1+4
 homepage: 'https://github.com/roozbehzamany/logger_master'
 
 environment:

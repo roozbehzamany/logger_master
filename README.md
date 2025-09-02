@@ -14,13 +14,13 @@
 
 <img width="1000" height="400" src="https://github.com/user-attachments/assets/d58e225b-250c-404c-967c-da63559b03a2" />
 
-1: Type your object like [String] ...
+1: Specify the object type – for example [String].
 
-2: Your object [Hello World]
+2: Provide the object value – e.g. "Hello World".
 
-3: Exact file line logger
+3: Log the exact file and line number where the object is used.
 
-4: Number of line logger
+4: Log only the line number of the object’s location.
 
 📥 Installation
 
@@ -28,7 +28,7 @@ Add to your pubspec.yaml:
 
 ```dart
 dependencies:
-  logger_master: ^1.0.0+3
+  logger_master: ^1.0.0+4
 ```
 
 Then run:
