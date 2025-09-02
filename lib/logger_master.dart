@@ -36,7 +36,8 @@ extension ObjectLogger on Object {
     final location = _parseFrame(frame);
 
     // Format clickable path for IDEs (VS Code / Android Studio)
-    final clickablePath = location != 'unknown' ? 'file://$location' : 'unknown';
+    final clickablePath =
+        location != 'unknown' ? 'file://$location' : 'unknown';
 
     if (kDebugMode) {
       // Only log in debug mode

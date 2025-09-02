@@ -11,7 +11,6 @@ void main() {
   123.logDebug();
   exampleModel.logWarning();
   exampleModel.name.logError();
-
 }
 
 class MyApp extends StatelessWidget {
