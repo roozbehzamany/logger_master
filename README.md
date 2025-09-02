@@ -28,7 +28,7 @@ Add to your pubspec.yaml:
 
 ```dart
 dependencies:
-  logger_master: ^1.0.0+4
+  logger_master: ^1.0.2
 ```
 
 Then run:
